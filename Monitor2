@@ -1,0 +1,21 @@
+import java.awt.*;
+public class Monitor2 {
+    public static void main(String[] args) {
+        Monitor monitor = new Monitor(32,"AOC","C24G1A","lED",4030,"Sin señal");
+        Monitor monitor1 = new Monitor();
+        System.out.println(monitor1);
+       monitor1.setPulgadas(40);
+       monitor1.setMarca("GameFactor");
+       monitor1.setModelo("MG600-V2");
+       monitor1.setTipo("lED");
+       monitor1.setEstado("Sin señal");
+        System.out.println(monitor);
+        System.out.println(monitor1);
+
+
+        monitor.sinseñal();
+        monitor.encender();
+        monitor1.apagar();
+
+    }
+}

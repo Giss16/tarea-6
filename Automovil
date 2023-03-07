@@ -1,0 +1,101 @@
+import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class Automovil {
+    private String marca;
+    private String subMarca;
+    private byte modelo; // 2000 + byte
+    private Color color;
+    private String estado;
+
+    public Automovil() {
+        marca = " ";
+        subMarca =" ";
+        modelo = 0;
+        color = Color.MAGENTA;
+        estado = " ";
+    }
+
+    public Automovil(String marca, String subMarca, byte modelo, Color color, String estado) {
+        this.marca = marca;
+        this.subMarca = subMarca;
+        this.modelo = modelo;
+        this.color = color;
+        this.estado = estado;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String m){
+        ArrayList<String> marcas = new ArrayList<>();
+        marcas.add("VW");
+        marcas.add("TESLA");
+        marcas.add("MAZDA");
+        marcas.add("TOYOTA");
+        marcas.add("KYA");
+        marcas.add("BMW");
+
+        if (marcas.contains(m.toUpperCase())) {
+            this.marca = m;
+        }else{
+            System.out.println("Esa marca aqui no existe mi bro!! :p");
+        }
+    }
+
+    public String getSubMarca() {
+        return subMarca;
+    }
+
+    public void setSubMarca(String subMarca) {
+        this.subMarca = subMarca;
+    }
+
+    public byte getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(byte modelo) {
+        this.modelo = modelo;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String toString() {
+        return "Automovil{" +
+                "marca='" + marca + '\'' +
+                ", subMarca='" + subMarca + '\'' +
+                ", modelo=" + modelo +
+                ", color=" + color +
+                ", estado=" + estado +
+                '}';
+    }
+    public void encender() {
+        estado = "Encendido";
+        System.out.println("El carro se encuentra: " + estado);
+    }
+    public void avanzar(){
+        estado = "En movimiento";
+        System.out.println("El carro se encuentra: " + estado);
+    }
+    public void retroceder(){
+        estado = "Retrocede";
+        System.out.println("El carro: " + estado);
+    }
+}

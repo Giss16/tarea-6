@@ -1,0 +1,18 @@
+public class Persona2 {
+    public static void main(String[] args) {
+        Persona persona = new Persona();
+        Persona persona1 = new Persona( 21, "Giss", 1.57, 50, "Femenino");
+        persona.setEdad(48);
+        persona.setNombre("Rosi");
+        persona.setEstatura(1.55);
+        persona.setPeso(60);
+        persona.setGenero("Femenino");
+
+        System.out.println(persona.toString());
+        System.out.println(persona1.toString());
+
+        persona.estatura();
+        persona1.Cumplir();
+        persona.Comer();
+    }
+}

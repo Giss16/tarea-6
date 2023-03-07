@@ -1,0 +1,17 @@
+import java.awt.*;
+public class AutomovilDriver {
+    public static void main(String[] args) {
+        Automovil auto1 = new Automovil();
+        Automovil auto2 = new Automovil("Mazda", "Mazda2", (byte)15, Color.darkGray,"Apagado");
+        auto1.setMarca("BMW");
+        auto1.setSubMarca("M2 COUPE");
+        auto1.setModelo((byte)2023);
+        auto1.setColor(Color.magenta);
+        auto1.setEstado("Apagado");
+        System.out.println(auto1.toString());
+        System.out.println(auto2.toString());
+        auto1.avanzar();
+        auto1.retroceder();
+        auto2.retroceder();
+    }
+}

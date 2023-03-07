@@ -1,0 +1,18 @@
+public class Pelicula2 {
+    public static void main(String[] args) {
+        Pelicula pelicula = new Pelicula();
+        Pelicula pelicula1 = new Pelicula(15, "Giss", 120, 2, "Terror");
+        pelicula.setFecha(15);
+        pelicula.setNombre("IT el payaso");
+        pelicula.setPrecio(0);
+        pelicula.setAcompañantes(0);
+        pelicula.setGenero("Terror");
+
+        System.out.println(pelicula.toString());
+        System.out.println(pelicula1.toString());
+
+       pelicula.Entrar();
+        pelicula1.Salir();
+       pelicula1.Comprar();
+    }
+}

@@ -1,0 +1,99 @@
+public class Pelicula {
+        private int fecha;
+        private String nombre;
+        private double precio;
+        private double acompañantes;
+        private String genero;
+        private String estado;
+
+        public Pelicula() {
+            fecha = 0;
+            nombre = " ";
+            precio = 0.0;
+            acompañantes = 0;
+            genero = " ";
+            estado = " ";
+        }
+
+        public Pelicula(int fecha, String nombre, double precio, double acompañantes, String genero) {
+            this.fecha = fecha;
+            this.nombre = nombre;
+            this.precio = precio;
+            this.acompañantes = acompañantes;
+            this.genero = genero;
+            this.estado = estado;
+        }
+
+        public int getFecha() {
+            return fecha;
+        }
+
+        public void setFecha(int fecha) {
+            this.fecha = fecha;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+        public double getPrecio() {
+            return precio;
+        }
+
+        public void setPrecio(double precio) {
+            this.precio = precio;
+        }
+
+        public double getAcompañantes() {
+            return acompañantes;
+        }
+
+        public void setAcompañantes(double acompañantes) {
+            this.acompañantes = acompañantes;
+        }
+
+        public String getGenero() {
+            return genero;
+        }
+
+        public void setGenero(String genero) {
+            this.genero = genero;
+        }
+        public String getEstado() {
+            return estado;
+        }
+
+        public void setEstado(String estado) {
+            this.estado = estado;
+        }
+
+        @Override
+        public String toString() {
+            return "Persona{" +
+                    "fecha=" + fecha +
+                    ", nombre='" + nombre + '\'' +
+                    ", precio=" + precio +
+                    ", acompañantes=" + acompañantes +
+                    ", genero='" + genero + '\'' +
+                    '}';
+        }
+
+            public void Entrar() {
+                estado = "Entrar a ver la pelicula";
+                System.out.println("Ahora estas/an entrando a la sala para ver la pelicula " + nombre);
+            }
+
+            public void Salir() {
+                estado = "Salir de la funcion";
+                System.out.println("Ahora saliste de la funcion con " + acompañantes);
+            }
+
+            public void Comprar() {
+                estado = "Comprar comida";
+                System.out.println("Compraste un combo con precio de " + precio);
+            }
+        }
