@@ -1,0 +1,109 @@
+import java.util.ArrayList;
+public class Monitor {
+    private double pulgadas;
+    private String marca;
+    private String Modelo;
+    private String tipo;
+    private double precio;
+    private String estado;
+
+    public Monitor(){
+        pulgadas = 0.0;
+        marca = " ";
+        Modelo = " ";
+        tipo = " ";
+        precio = 0.0;
+        estado = " ";
+    }
+    public Monitor(double pulgadas, String marca, String Modelo, String tipo, double precio, String sinSeñal){
+        this.pulgadas = pulgadas;
+        this.marca = marca;
+        this.Modelo = Modelo;
+        this.tipo = tipo;
+        this.precio = precio;
+        this.estado = estado;
+    }
+
+    public double getPulgadas() {
+        return pulgadas;
+    }
+
+    public void setPulgadas(double pulgadas) {
+        this.pulgadas = pulgadas;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String m){
+        ArrayList<String> marcas = new ArrayList<>();
+        marcas.add("SAMSUNG");
+        marcas.add("AOC");
+        marcas.add("GAMEFACTOR");
+        marcas.add("LG");
+        marcas.add("BALAM RUSH");
+
+        if (marcas.contains(m.toUpperCase())) {
+            this.marca = m;
+        }else{
+            System.out.println("Esa marca aqui no existe mi bro!! :p");
+        }
+    }
+
+    public String getModelo() {
+        return Modelo;
+    }
+
+    public void setModelo(String modelo) {
+        Modelo = modelo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "pulgadas=" + pulgadas +
+                ", marca='" + marca + '\'' +
+                ", Modelo='" + Modelo + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", precio=" + precio +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
+    public void encender(){
+        estado = "Encendido";
+        System.out.println("El monitor se encuentra: " + estado);
+    }
+    public void apagar(){
+        estado = "Apagado";
+        System.out.println("El monitor se encuentra: " + estado);
+    }
+    public void sinseñal(){
+        estado = "Sin señal";
+        System.out.println("El monitor se encuentra: " + estado);
+    }
+}
